@@ -1,0 +1,51 @@
+@use "sass:map";
+
+$colors: (
+  dark: #23262d,
+  light: #ffff,
+);
+
+.todo-app {
+  background-color: map.get($colors, dark);
+  width: 320px;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: 0;
+  margin: 0.5rem;
+  box-shadow: 0 0 10px rgba($color: map.get($colors, dark), $alpha: 0.3);
+  padding: 1.5rem;
+  color: map.get($colors, light) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  ::ng-deep .mat-form-field {
+    label,
+    mat-hint {
+      color: map.get($colors, light);
+    }
+
+    .mat-form-field-flex {
+      background-color: transparent;
+    }
+
+    .mat-form-field-underline::before {
+      background-color: map.get($colors, light) !important;
+    }
+  }
+
+  &.light-theme {
+    background-color: map.get($colors, light);
+    color: map.get($colors, dark) !important;
+
+    ::ng-deep .mat-form-field {
+      label,
+      mat-hint {
+        color: map.get($colors, dark);
+      }
+      .mat-form-field-underline::before {
+        background-color: map.get($colors, dark) !important;
+      }
+    }
+  }
+}

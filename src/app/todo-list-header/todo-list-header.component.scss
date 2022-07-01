@@ -1,0 +1,31 @@
+@use "sass:map";
+
+.todo-list-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: white;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    align-self: flex-start;
+  }
+
+  .todo-title {
+    h2 {
+      margin-bottom: 0 !important;
+    }
+  }
+}

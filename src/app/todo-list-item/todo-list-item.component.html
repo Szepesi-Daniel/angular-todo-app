@@ -1,0 +1,18 @@
+<div
+  [ngClass]="{ done: checkBox.checked }"
+  class="todo-item"
+  style="display: flex; justify-content: space-between; text-align: left"
+>
+  <div class="line"></div>
+  <mat-checkbox
+    [checked]="done"
+    ngInput
+    #checkBox
+    (change)="toggleDone(checkBox.checked)"
+    style="flex: 1"
+    >{{ todo }}</mat-checkbox
+  >
+  <mat-icon style="cursor: pointer" (click)="deleteElement()" color="warn"
+    >delete</mat-icon
+  >
+</div>

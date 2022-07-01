@@ -1,0 +1,19 @@
+<div class="todo-list-footer">
+  <mat-form-field
+    class="example-full-width"
+    style="width: 100%"
+    appearance="fill"
+  >
+    <mat-label>Todo</mat-label>
+    <input matInput #todo maxlength="24" />
+    <mat-hint align="end">{{ todo.value.length }} / 24</mat-hint>
+  </mat-form-field>
+  <button
+    mat-mini-fab
+    color="primary"
+    aria-label="Example icon button with a menu icon"
+    (click)="addItem()"
+  >
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

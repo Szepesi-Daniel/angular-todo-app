@@ -1,0 +1,23 @@
+<div class="todo-list-header">
+  <div class="todo-title">
+    <h2>Daily UI Todo List</h2>
+    <small>Practice Design Everyday</small>
+  </div>
+
+  <div
+    style="
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+    "
+  >
+    <div class="theme-toggle">
+      <mat-icon>dark_mode</mat-icon>
+      <mat-slide-toggle (change)="toggleTheme($event)"></mat-slide-toggle>
+      <mat-icon>light_mode</mat-icon>
+    </div>
+    <div>{{ doneTodos }}/{{ todos }}</div>
+  </div>
+  <div class="hr"></div>
+</div>
